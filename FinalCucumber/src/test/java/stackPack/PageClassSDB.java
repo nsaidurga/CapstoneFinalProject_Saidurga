@@ -442,8 +442,13 @@ public class PageClassSDB {
 	    pincode.sendKeys("520092");
 	    Thread.sleep(2000);
 	    d.findElement(By.id("checkout-shipping-continue")).click();
-	    Thread.sleep(3000);
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+	    Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
 	    Thread.sleep(1000);
 	}
 
@@ -583,8 +588,13 @@ public class PageClassSDB {
 	    pincode.sendKeys("123456");
 	    Thread.sleep(2000);
 	    d.findElement(By.id("checkout-shipping-continue")).click(); 
-	    Thread.sleep(3000);
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+	    Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
 	    Thread.sleep(1000);
 	}
 
