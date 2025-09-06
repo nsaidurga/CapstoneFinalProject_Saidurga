@@ -110,10 +110,15 @@ public class PageClassSDB {
 	    pincode.click();
 	    pincode.sendKeys("123456");
 	    click_on_submit();
-	    Thread.sleep(3000);
+	    Thread.sleep(1000);
 	    //d.findElement(By.className("button button--tertiary optimizedCheckout-buttonSecondary")).click();
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
-	    Thread.sleep(3000);
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+		 WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		 WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    Thread.sleep(1000);
 	}
 	
 	public void emptyfields() throws InterruptedException {
@@ -145,10 +150,15 @@ public class PageClassSDB {
 	    Thread.sleep(2000);
 	    pincode.sendKeys("354435");
 	    click_on_submit();
-	    Thread.sleep(3000);
+	    Thread.sleep(1000);
 	    //d.findElement(By.className("button button--tertiary optimizedCheckout-buttonSecondary")).click();
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
-	    Thread.sleep(3000);
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+		 WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		 WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    Thread.sleep(1000);
 	}
 
 	public void specialchars() throws InterruptedException {
@@ -171,10 +181,15 @@ public class PageClassSDB {
 	    pincode.click();
 	    pincode.sendKeys("43524@#$");
 	    click_on_submit();
-	    Thread.sleep(3000);
+	    Thread.sleep(1000);
 	    //d.findElement(By.className("button button--tertiary optimizedCheckout-buttonSecondary")).click();
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
-	    Thread.sleep(3000);
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+		 WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		 WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    Thread.sleep(1000);
 	}
 
 	public void nullvalues() throws InterruptedException {
@@ -197,10 +212,15 @@ public class PageClassSDB {
 	    pincode.click();
 	    pincode.sendKeys("null");
 	    click_on_submit();
-	    Thread.sleep(3000);
+	    Thread.sleep(1000);
 	    //d.findElement(By.className("button button--tertiary optimizedCheckout-buttonSecondary")).click();
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
-	    Thread.sleep(3000);
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+		 WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    Thread.sleep(1000);
 	}
 
 	public void postcode() throws InterruptedException {
@@ -626,8 +646,13 @@ public class PageClassSDB {
 	    pincode.sendKeys("520092");
 	    Thread.sleep(2000);
 	    d.findElement(By.id("checkout-shipping-continue")).click();
-	    Thread.sleep(3000);
-	    d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
+	    Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(20));
+		WebElement con = wait.until(
+		    ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]"))
+		);
+		con.click();
+	    //d.findElement(By.cssSelector("button[class=\"button button--tertiary optimizedCheckout-buttonSecondary\"]")).click();
 	    Thread.sleep(1000);
 	}
 
