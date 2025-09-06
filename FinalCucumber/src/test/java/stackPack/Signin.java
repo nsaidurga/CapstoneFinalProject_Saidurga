@@ -33,7 +33,7 @@ public class Signin {
 	}
 
 	@And("Clicks on the Sign In button1")
-	public void clicks_on_the_sign_in_button1() {
+	public void clicks_on_the_sign_in_button1() throws InterruptedException {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -63,7 +63,7 @@ public class Signin {
 	}
 
 	@And("Clicks on the Sign In button2")
-	public void clicks_on_the_sign_in_button2() {
+	public void clicks_on_the_sign_in_button2() throws InterruptedException {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -92,7 +92,7 @@ public class Signin {
 	}
 
 	@And("Clicks on the Sign In button3")
-	public void clicks_on_the_sign_in_button3() {
+	public void clicks_on_the_sign_in_button3() throws InterruptedException {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -121,7 +121,7 @@ public class Signin {
 	}
 
 	@And("Clicks on the Sign In button4")
-	public void clicks_on_the_sign_in_button4() {
+	public void clicks_on_the_sign_in_button4() throws InterruptedException {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -150,7 +150,7 @@ public class Signin {
 	}
 
 	@And("Clicks on the Sign In button5")
-	public void clicks_on_the_sign_in_button5() {
+	public void clicks_on_the_sign_in_button5() throws InterruptedException {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}

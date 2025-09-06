@@ -455,13 +455,13 @@ public class PageClassSDB {
 
 	public void scroll() throws InterruptedException {
 		Thread.sleep(2000);
-	    for(int i=0;i<9;i++) {
+	    for(int i=0;i<7;i++) {
 	    	((JavascriptExecutor)d).executeScript("window.scrollBy(0,300);");
-	    	Thread.sleep(2000);
+	    	Thread.sleep(500);
 	    }
-	    for(int i=0;i<9;i++) {
+	    for(int i=0;i<7;i++) {
 	    	((JavascriptExecutor)d).executeScript("window.scrollBy(0,-300);");
-	    	Thread.sleep(2000);
+	    	Thread.sleep(500);
 	    }
 	    d.close();
 	}
@@ -801,12 +801,14 @@ public class PageClassSDB {
 	}
 	
 	public void password() throws InterruptedException {
+		Thread.sleep(1000);
 		d.findElement(By.xpath("//div[@id=\"password\"]//div[text()=\"Select Password\"]")).click();
 		Thread.sleep(3000);
 		d.findElement(By.xpath("//div[@id=\"password\"]//div[text()=\"testingisfun99\"]")).click();
 	}
 
-	public void signinsubmit() {
+	public void signinsubmit() throws InterruptedException {
+		Thread.sleep(1000);
 		d.findElement(By.id("login-btn")).click();
 	}
 
