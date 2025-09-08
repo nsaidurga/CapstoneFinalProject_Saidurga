@@ -7,71 +7,40 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class CheckOutProcess {
+public class CheckoutDemo {
 	WebDriver d;
-	@Given("Home4 page visible")
-	public void home_page_visible() {
+	@Given("Home page is visible for checkout")
+	public void home_page_is_visible_for_checkout() {
 		d=new ChromeDriver();
 		d.get("https://bstackdemo.com/");
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
-	
-	@And("Login user")
-	public void login_user() throws InterruptedException {
-		PageClassSDB pc=new PageClassSDB(d);
-		pc.login();
-		
-	}
-	@When("After adding a product")
-	public void after_adding_a_product() throws InterruptedException {
+
+	@And("After1 adding a product")
+	public void after1_adding_a_product()  {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.afteradd();
 	}
 
-	@Then("click on checkout button")
-	public void click_on_checkout_button() throws InterruptedException {
+	@And("click on checkout1 button")
+	public void click_on_checkout1_button()  {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.checkbuton();
 	}
 
-	@And("verify fill all fields")
-	public void verify_fill_all_fields() throws InterruptedException {
+	@And("Login the user for checkout")
+	public void login_the_user_for_checkout()  {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.allfields();
-	}
-	@And("verify without filled fields")
-	public void verify_without_filled_fields() throws InterruptedException {
-		PageClassSDB pc=new PageClassSDB(d);
-		pc.emptyfields();
+		pc.login();
 	}
 
-	@And("verify all fields with special characters")
-	public void verify_all_fields_with_special_characters() throws InterruptedException {
+	@When("checkout with input fields {string}, {string}, {string}, {string} and {string}")
+	public void checkout_with_input_fields_firstname_lastname_address_state_and_pincode(String firstname,String lastname,String address,String state,String pincode) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.specialchars();
+		pc.allfields(firstname, lastname, address, state, pincode);
+
 	}
-
-	@And("verify all fields with null values")
-	public void verify_all_fields_with_null_values() throws InterruptedException {
-		PageClassSDB pc=new PageClassSDB(d);
-		pc.nullvalues();
-	}
-
-	@And("verify postal code with nonNumbers")
-	public void verify_postal_code_with_non_numbers() throws InterruptedException {
-		PageClassSDB pc=new PageClassSDB(d);
-		pc.postcode();
-	}
-
-	@And("close the page")
-	public void close_the_page() throws InterruptedException {
-		PageClassSDB pc=new PageClassSDB(d);
-		pc.closepage();
-	}
-
-
 }
