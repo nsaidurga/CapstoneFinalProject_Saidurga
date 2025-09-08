@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="658.138" tests="27" skipped="0" failures="0" errors="0" timestamp="2025-09-04T12:51:28.490490200Z">
+<testcase classname="Add to Cart by user" name="Adding products to cart" time="29.461">
+<system-out><![CDATA[
+Given Home page visible.....................................................passed
+When search a product.......................................................passed
+Then click on addtocart button..............................................passed
+And increase the count for same product.....................................passed
+And check details of the product............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Checkout process" name="Checkout product" time="105.378">
+<system-out><![CDATA[
+Given Home4 page visible....................................................passed
+When After adding a product.................................................passed
+Then click on checkout button...............................................passed
+And Login user..............................................................passed
+And verify fill all fields..................................................passed
+And verify without filled fields............................................passed
+And verify all fields with special characters...............................passed
+And verify all fields with null values......................................passed
+And verify postal code with nonNumbers......................................passed
+And close the page..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Delete from Cart" name="Delete products from Cart" time="24.125">
+<system-out><![CDATA[
+Given Home page1 visible....................................................passed
+When search a1 product......................................................passed
+Then add multiple products to cart..........................................passed
+And remove all items from cart..............................................passed
+And ensure cart is empty....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Favourites Module" name="Favourites adding" time="26.94">
+<system-out><![CDATA[
+Given User on home page.....................................................passed
+Given Click on favourites tab...............................................passed
+When demoUser1 login with credentials.......................................passed
+And no favourites found.....................................................passed
+Then Add few favourites.....................................................passed
+And click on the favouritestab..............................................passed
+And all favourites here.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Favourites Module" name="Favourites remove from favuser" time="28.513">
+<system-out><![CDATA[
+Given User on home page.....................................................passed
+Given Click on favourites tab...............................................passed
+When favoriteUser1 login with credentials...................................passed
+And you can see all favourites..............................................passed
+Then Remove all favourites..................................................passed
+And Returned to home page...................................................passed
+And click on favourites.....................................................passed
+And After the favourites page...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Favourites Module" name="Add to cart from Favourites" time="32.839">
+<system-out><![CDATA[
+Given User on home page.....................................................passed
+Given Click on favourites tab...............................................passed
+When favoriteUser2 login with credentials...................................passed
+Then place1 the order from favourites.......................................passed
+And order1 page opened......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Filter by option" name="Filtering Products" time="51.187">
+<system-out><![CDATA[
+Given Home3 page visible....................................................passed
+When click on search button.................................................passed
+Then click on Order by select button........................................passed
+And choose the type of filtering............................................passed
+And Scroll the List of products.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logging out the user" name="Log out user" time="15.994">
+<system-out><![CDATA[
+Given Home1 page visible....................................................passed
+When user can login.........................................................passed
+Then click on the logout button.............................................passed
+And home page for guest.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Orders Module" name="User1 Orders" time="20.449">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+Given Click on Orders tab...................................................passed
+When existingUser login with credentials....................................passed
+And Clicked the order tab...................................................passed
+Then user can see all orders................................................passed
+And scrolldown page and close...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Orders Module" name="User2 Orders" time="35.178">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+Given Click on Orders tab...................................................passed
+When demoUser login with credentials........................................passed
+And Clicked1 the order tab..................................................passed
+Then added anew product.....................................................passed
+And all placed orders.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Orders Module" name="User3 Orders" time="34.422">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+Given Click on Orders tab...................................................passed
+When favoriteUser login with credentials....................................passed
+And Clicked2 the order tab..................................................passed
+Then place the order from favourites........................................passed
+And order page opened.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Multiple search words" time="21.757">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+Then Entering the search words..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Search Partial Product" time="11.257">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+And Search with Partial Product.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Search Invalid Keyword" time="13.406">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+And Search with Invalid Keyword.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Search Special Characters" time="12.398">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+And Search with Special Characters..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Search Blank Input" time="11.921">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+And Search with Blank Input.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Search extra spaces Input" time="13.486">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+And Search with extra spaces Input..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Module" name="Case Sensitivity Check" time="39.647">
+<system-out><![CDATA[
+Given Home page available...................................................passed
+When click on search input field............................................passed
+And Case Sensitivity Check..................................................passed
+And Listed the matched results..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Select category" name="Select product by Single Category" time="16.698">
+<system-out><![CDATA[
+Given Home2 page visible....................................................passed
+Given check available categories............................................passed
+When click on single category button........................................passed
+Then See the specified selected category of the products....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Select category" name="Select product by Double Category" time="16.885">
+<system-out><![CDATA[
+Given Home2 page visible....................................................passed
+Given check available categories............................................passed
+When click on two category buttons..........................................passed
+Then See the two specified selected categories of the products..............passed
+]]></system-out>
+</testcase>
+<testcase classname="Select category" name="Select product by Triple Category" time="18.149">
+<system-out><![CDATA[
+Given Home2 page visible....................................................passed
+Given check available categories............................................passed
+When click on three category buttons........................................passed
+Then See the three particular selected categories of the products...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Select category" name="Select product by Fourth Category" time="23.872">
+<system-out><![CDATA[
+Given Home2 page visible....................................................passed
+Given check available categories............................................passed
+When click on four category buttons.........................................passed
+Then See the four particular selected categories of the products............passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Sign In User1" time="12.642">
+<system-out><![CDATA[
+Given User is on the Sign In page...........................................passed
+When User1 enters username..................................................passed
+And Enters password1........................................................passed
+And Clicks on the Sign In button1...........................................passed
+Then User1 should be successfully logged in.................................passed
+And Homepage1 should be displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Sign In User2" time="10.022">
+<system-out><![CDATA[
+Given User is on the Sign In page...........................................passed
+When User2 enters username..................................................passed
+And Enters password2........................................................passed
+And Clicks on the Sign In button2...........................................passed
+Then User2 should be successfully logged in.................................passed
+And Homepage2 should be displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Sign In User3" time="10.486">
+<system-out><![CDATA[
+Given User is on the Sign In page...........................................passed
+When User3 enters username..................................................passed
+And Enters password3........................................................passed
+And Clicks on the Sign In button3...........................................passed
+Then User3 should be successfully logged in.................................passed
+And Homepage3 should be displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Sign In User4" time="10.057">
+<system-out><![CDATA[
+Given User is on the Sign In page...........................................passed
+When User4 enters username..................................................passed
+And Enters password4........................................................passed
+And Clicks on the Sign In button4...........................................passed
+Then User4 should be successfully logged in.................................passed
+And Homepage4 should be displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sign In functionality" name="Sign In User5" time="10.651">
+<system-out><![CDATA[
+Given User is on the Sign In page...........................................passed
+When User5 enters username..................................................passed
+And Enters password5........................................................passed
+And Clicks on the Sign In button5...........................................passed
+Then User unable to sign in.................................................passed
+And Your account has been locked............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
