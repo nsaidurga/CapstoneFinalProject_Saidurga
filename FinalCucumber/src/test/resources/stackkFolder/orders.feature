@@ -15,13 +15,20 @@ Feature: Orders Module
   Scenario: User2 Orders
     When demoUser login with credentials
     And Clicked1 the order tab
-    Then added anew product
+    Then a1dded112 anew product "<firstname1>", "<lastname1>", "<address1>", "<state1>" and "<pincode1>"
     And all placed orders
-    
-  @Positive
+
+Examples:
+|firstname1|lastname1|address1|state1|pincode1|
+|Tarun|Star|KLF colony,Vizag|AP|435263|    
+ 
+@Positive
   Scenario: User3 Orders
     When favoriteUser login with credentials
     And Clicked2 the order tab
-    Then place the order from favourites
+    Then p1lace112 the order from favourites "<firstname>", "<lastname>", "<address>", "<state>" and "<pincode>"
     And order page opened
     
+Examples:
+|firstname|lastname|address|state|pincode|
+|Akhil|Kumar|ABC colony,KPHB,Hyderabad|Telangana|123456|
