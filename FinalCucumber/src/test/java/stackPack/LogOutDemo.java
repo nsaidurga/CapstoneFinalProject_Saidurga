@@ -15,6 +15,7 @@ public class LogOutDemo {
 	
 	@Given("Home1 page visible")
 	public void home1_page_visible() {
+		
 		d=new ChromeDriver();
 		d.get("https://bstackdemo.com/signin");
 		d.manage().window().maximize();
@@ -22,7 +23,7 @@ public class LogOutDemo {
 	}
 
 	@When("user can login")
-	public void user_can_login() throws InterruptedException {
+	public void user_can_login() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.userlog();
 	}
@@ -34,9 +35,8 @@ public class LogOutDemo {
 	}
 
 	@And("home page for guest")
-	public void home_page_for_guest() throws InterruptedException {
+	public void home_page_for_guest() {
 	    System.out.println("Home page is opened for guest");
-	    Thread.sleep(1000);
 	    d.close();
 	}
 }
