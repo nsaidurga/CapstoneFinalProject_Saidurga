@@ -3,6 +3,7 @@ package stackPack;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +14,9 @@ public class SearchDS {
 	WebDriver d;
 	@Given("Home page available")
 	public void home_page_available() {
-		d=new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.setPageLoadStrategy(org.openqa.selenium.PageLoadStrategy.EAGER);
+		d=new ChromeDriver(options);
 		d.get("https://bstackdemo.com/");
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -25,52 +28,50 @@ public class SearchDS {
 		pc.clicksearchfiled();
 	}
 
-	@Then("Entering the search words")
-	public void entering_the_search_words() throws InterruptedException {
+	@Then("Entering the search words {string}")
+	public void entering_the_search_words(String name) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.searchwords();
+		pc.searchwords(name);
 	}
 	
-	@Given("Search with Partial Product")
-	public void search_with_partial_product() throws InterruptedException {
+	@Given("Search with Partial Product {string}")
+	public void search_with_partial_product(String partial)  {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.partialname();
+		pc.partialname(partial);
 	}
 
-	@Given("Search with Invalid Keyword")
-	public void search_with_invalid_keyword() throws InterruptedException {
+	@Given("Search with Invalid Keyword {string}")
+	public void search_with_invalid_keyword(String invalid) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.invalidname();
+		pc.invalidname(invalid);
 	}
 
-	@Given("Search with Special Characters")
-	public void search_with_special_characters() throws InterruptedException {
+	@Given("Search with Special Characters {string}")
+	public void search_with_special_characters(String special) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.specialsearch();
+		pc.specialsearch(special);
 	}
 
-	@Given("Search with Blank Input")
-	public void search_with_blank_input() throws InterruptedException {
+	@Given("Search with Blank Input {string}")
+	public void search_with_blank_input(String blank) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.blanksearch();
+		pc.blanksearch(blank);
 	}
 
-	@Given("Search with extra spaces Input")
-	public void search_with_extra_spaces_input() throws InterruptedException {
+	@Given("Search with extra spaces Input {string}")
+	public void search_with_extra_spaces_input(String space) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.spacessearch();
+		pc.spacessearch(space);
 	}
 
-	@Given("Case Sensitivity Check")
-	public void case_sensitivity_check() throws InterruptedException {
+	@Given("Case Sensitivity Check {string}")
+	public void case_sensitivity_check(String case1) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.casesensitive();
+		pc.casesensitive(case1);
 	}
 
 	@Then("Listed the matched results")
 	public void listed_the_matched_results() {
 	    System.out.println("All matched results here");
 	}
-
-
 }
