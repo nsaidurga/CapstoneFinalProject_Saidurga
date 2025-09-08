@@ -23,7 +23,9 @@ Feature: Favourites Module
   @Positive
   Scenario: Add to cart from Favourites
     When favoriteUser2 login with credentials
-    Then place1 the order from favourites
+    Then place1 the order from favourites "<firstname>", "<lastname>", "<address>", "<state>" and "<pincode>"
     And order1 page opened   
     
-    
+Examples:
+|firstname|lastname|address|state|pincode|
+|Akhil|Kumar|ABC colony,KPHB,Hyderabad|Telangana|123456|
