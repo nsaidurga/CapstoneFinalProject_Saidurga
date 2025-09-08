@@ -15,20 +15,21 @@ public class DeleteCart {
 
 	@Given("Home page1 visible")
 	public void home_page1_visible() {
-		d = new ChromeDriver();
+		
+		d=new ChromeDriver();
 		d.get("https://bstackdemo.com/");
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-	@When("search a1 product")
-	public void search_a1_product() throws InterruptedException {
+	@When("search a1 product {string}")
+	public void search_a1_product(String proname) {
 		PageClassSDB pc=new PageClassSDB(d);
-		pc.prodsearch();
+		pc.prodsearch(proname);
 	}
 
 	@Then("add multiple products to cart")
-	public void add_multiple_products_to_cart() throws InterruptedException {
+	public void add_multiple_products_to_cart() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.multipleadd();
 	}
@@ -40,7 +41,7 @@ public class DeleteCart {
 	}
 
 	@And("ensure cart is empty")
-	public void ensure_cart_is_empty() throws InterruptedException {
+	public void ensure_cart_is_empty() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.emptycart();
 
