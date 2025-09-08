@@ -21,19 +21,19 @@ public class Signin {
 	}
 
 	@When("User1 enters username")
-	public void user1_enters_username() throws InterruptedException {
+	public void user1_enters_username() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.username1();
 	}
 	
 	@And("Enters password1")
-	public void enters_password1() throws InterruptedException {
+	public void enters_password1() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.password();
 	}
 
 	@And("Clicks on the Sign In button1")
-	public void clicks_on_the_sign_in_button1() throws InterruptedException {
+	public void clicks_on_the_sign_in_button1() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -44,26 +44,25 @@ public class Signin {
 	}
 
 	@And("Homepage1 should be displayed")
-	public void homepage1_should_be_displayed() throws InterruptedException {
+	public void homepage1_should_be_displayed() {
 		System.out.println("Home page is opened");
-		Thread.sleep(2000);
 	    d.close();
 	}
-//2
+//
 	@When("User2 enters username")
-	public void user2_enters_username() throws InterruptedException {
+	public void user2_enters_username() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.username2();
 	}
 
 	@And("Enters password2")
-	public void enters_password2() throws InterruptedException {
+	public void enters_password2() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.password();
 	}
 
 	@And("Clicks on the Sign In button2")
-	public void clicks_on_the_sign_in_button2() throws InterruptedException {
+	public void clicks_on_the_sign_in_button2() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -80,19 +79,19 @@ public class Signin {
 	}
 //
 	@When("User3 enters username")
-	public void user3_enters_username() throws InterruptedException {
+	public void user3_enters_username() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.username3();
 	}
 
 	@And("Enters password3")
-	public void enters_password3() throws InterruptedException {
+	public void enters_password3()  {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.password();
 	}
 
 	@And("Clicks on the Sign In button3")
-	public void clicks_on_the_sign_in_button3() throws InterruptedException {
+	public void clicks_on_the_sign_in_button3() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -109,19 +108,19 @@ public class Signin {
 	}
 //
 	@When("User4 enters username")
-	public void user4_enters_username() throws InterruptedException {
+	public void user4_enters_username(){
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.username4();
 	}
 
 	@And("Enters password4")
-	public void enters_password4() throws InterruptedException {
+	public void enters_password4(){
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.password();
 	}
 
 	@And("Clicks on the Sign In button4")
-	public void clicks_on_the_sign_in_button4() throws InterruptedException {
+	public void clicks_on_the_sign_in_button4() {
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -138,19 +137,19 @@ public class Signin {
 	}
 //
 	@When("User5 enters username")
-	public void user5_enters_username() throws InterruptedException {
+	public void user5_enters_username(){
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.username5();
 	}
 
 	@And("Enters password5")
-	public void enters_password5() throws InterruptedException {
+	public void enters_password5(){
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.password();
 	}
 
 	@And("Clicks on the Sign In button5")
-	public void clicks_on_the_sign_in_button5() throws InterruptedException {
+	public void clicks_on_the_sign_in_button5(){
 		PageClassSDB pc=new PageClassSDB(d);
 		pc.signinsubmit();
 	}
@@ -165,5 +164,4 @@ public class Signin {
 		System.out.println("Home page is not open");
 	    d.close();
 	}
-
 }
