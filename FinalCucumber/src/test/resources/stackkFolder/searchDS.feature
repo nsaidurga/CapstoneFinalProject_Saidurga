@@ -34,6 +34,6 @@ And Case Sensitivity Check "<case1>"
 
 And Listed the matched results
 
-Example:
+Examples:
 |partial|invalid|special|blank|space|case1|
 |iph|dfsgter5342@|$@$@%%||   |iPoNE|
